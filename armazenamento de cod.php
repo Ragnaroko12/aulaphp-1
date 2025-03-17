@@ -58,7 +58,7 @@ array_reverse($vet);
 array_sum($vet);
  
 /* sort - ordena os valores do array em ordem ascendente, modificando o array */
-sort($vet)
- 
- 
+sort($vet);
+
+
 ?>
