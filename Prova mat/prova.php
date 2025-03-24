@@ -210,6 +210,8 @@ cubos(10);
 esferas(8);
 paralelepipedo(10,23,10);
 
+echo "commit viado"
+
 // vi que os resultados saem muito quebrados ent apartir de agora tudo será aredondado
 // com execeção de volume
 ?>
