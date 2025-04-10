@@ -2,14 +2,13 @@
 
 $macaco = 1;
 $macaco2 = 1;
-$cachorro = 1;
+$cachorro = 2;
 
-//         V             V              = F
-if ($macaco == 1 and $macaco2 == 1) {
-    echo "impar";
-}else {
-    echo "Par";
+for ($i=0; $i <= 10 ; $i++) { 
+    $macaco= $macaco*2;
+    echo "$macaco"
 }
+
 
 ?>
 
