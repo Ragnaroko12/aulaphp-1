@@ -43,7 +43,7 @@
     </ul> 
     
     <p><br>tambem temos fotos de um soldado do exercito pato</p>
-    <Img><img src="imagem3.jpg"alt="soldado do exercito pato"></Img>
+    <img src="imagem3.jpg"alt="soldado do exercito pato" width="500">
     <a href="https://www.peritoanimal.com.br/tipos-de-patos-23377.html">os 20 tipos de pato</a>   
 </body>
 </html>
