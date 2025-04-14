@@ -72,5 +72,12 @@ array_sum($vet);
 /* sort - ordena os valores do array em ordem ascendente, modificando o array */
 sort($vet);
 
+session_start(); // inicializa uma sessão
+
+
+$_SESSION['nome']; // cria uma variavel superglobsl do tipo vetor e armazena um valor
+
+header("location: nome do arquivo") // envia os dadps para um arquivo
+
  
 ?>
