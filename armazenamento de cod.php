@@ -1,16 +1,5 @@
 <?php
 
-
-
-
-
-
-
-
-
-
-
-
 // estruturas de repetição 
 $nomedovetor = [1,2,3,4,5,6,7];
 
@@ -77,7 +66,50 @@ session_start(); // inicializa uma sessão
 
 $_SESSION['nome']; // cria uma variavel superglobsl do tipo vetor e armazena um valor
 
-header("location: nome do arquivo") // envia os dadps para um arquivo
+header("location: nome do arquivo"); // envia os dadps para um arquivo
 
- 
+/*----------------------------------------------------------------------------------------
+file_put_contents cria,sobrescreve ou abre um arquivo 
+caso tenha a nescessidade de adicionar um texto sem sobreescrever oq ja está dentro do 
+arquivo é nescessario usar */FILE_APPEND;
+
+ file_put_contents("nome_do_arquivo.txt", "texto que você quer salvar");
+
+/*
+file_get_contents é quase igual ao comando de cima 
+porem ele armazena o texto do arquivo em uma variavel
+*/
+
+ $texto = file_get_contents("tarefas.txt");
+
+ trim($tarefas); //remove espaços em branco no começo/fim da string (inclusive quebras de linha).
+
+htmlspecialchars($tarefas); //impede que alguém insira código malicioso no campo de tarefa (ex: <script>).
+
+
+/* explode() Serve pra dividir uma string em partes, com base em algum caractere.
+No nosso caso, a gente usa \n (quebra de linha) pra separar as tarefas do arquivo em uma lista.
+*/
+explode("/n",$texto);
+
+/* isset() é uma função do PHP que serve para verificar se uma variável 
+foi definida e não é nula. Ela retorna true se a variável existe e contém algum valor,
+ e retorna false se a variável não existe ou se o valor dela for null
+*/
+   $nome = "João";
+
+   if (isset($nome)) {
+      echo "A variável nome está definida e não é nula.";
+   } else {
+      echo "A variável nome não está definida ou é nula.";
+   }
+
+
+
+
+
+
+
+
+
 ?>
