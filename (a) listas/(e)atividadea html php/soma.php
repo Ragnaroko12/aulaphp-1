@@ -1,47 +1,26 @@
 <?php
 session_start();
-$nome = $_POST["nome"];
-$rua = $_POST["rua"];
-$numero = $_POST["numero"];
-$bairro = $_POST["bairro"];
-$cep = $_POST["cep"];
-$cidade = $_POST["cidade"];
-$estado = $_POST["estado"];
-$email = $_POST["email"];
-$cpf = $_POST["cpf"];
-$rg = $_POST["rg"];
-$nacimento = $_POST["nacimento"];
-$civil = $_POST["civil"];
-$sexo = $_POST["sexo"];
+
 $senha = $_POST["senha"];
 $csenha = $_POST["csenha"];
 
-$fixa = {
-    "nome"
-    "rua"
-    "numero da casa"
-    "bairro"
-    "cep"
-    "cidade"
-    "estado"
-    "email"
-    "cpf"
-    "rg"
-    "nacimento"
-    "civil"
+if ($_POST !== "") {
 
-
-};
-
-
-
-$_SESSION["fixa"] = ;
-
-
-
+    if ($senha == $csenha and $senha !== "") {
+        $_SESSION["Resposta"] = "dados validados";
+        header("location:exemplo.php");
+    }else{
+        $_SESSION["Resposta"] = "O Valor da senha é nulo ou os campos não batem";
+        header("location:exemplo.php");
+    }
+}else{
+    $_SESSION["Resposta"] = "algum valor incompleto";
+    header("location:exemplo.php");
+}
 
 
 ?>
+
 
 
 
