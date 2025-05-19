@@ -105,7 +105,7 @@ session_start();
             <!-- linha 7 -->
             <div class="row">
                 <div class="col-mb-12 mt-2">
-                    <input class="form-control" type="date" name="nacimento" id="" placeholder="Data de nacimento">                    
+                    <input class="form-control" type="date" name="nascimento" id="" placeholder="Data de nacimento">                    
                 </div>
             </div>
             <!-- linha 8 -->
