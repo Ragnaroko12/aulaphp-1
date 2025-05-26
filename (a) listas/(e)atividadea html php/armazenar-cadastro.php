@@ -46,18 +46,18 @@ if ($controle > 0) {
             dados cadastrados que o grande lider esteja com você 
             </div>";
             cadastrarbanco();
-            header("location:exemplo.php");
+            header("location:tela-de-login.php");
     }else{
         $_SESSION["Resposta"] = "<div class='alert alert-danger' role='alert'>
          O lider desaprova sua estupidez o Valor da senha é nulo ou os campos não batem 
          </div>";
-        header("location:exemplo.php");
+        header("location:Cadastro.php");
     }
 }else{
     $_SESSION["Resposta"] = "<div class='alert alert-danger' role='alert'>
     O lider despreza suas ações algum campo não foi preenchido corretamente
     </div>";
-    header("location:exemplo.php");
+    header("location:Cadastro.php");
 }
 
 

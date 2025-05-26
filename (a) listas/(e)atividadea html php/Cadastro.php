@@ -16,7 +16,7 @@ session_start();
     <div class="container ">
 
         <h1>fixinha da associação Pato</h1>
-        <form action="soma.php" method="post" class="row">
+        <form action="armazenar-cadastro.php" method="post" class="row">
             <!-- linha 1 -->
             <div class="row">
                 <div class="col-mb-12 mt-2">
