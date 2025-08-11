@@ -1,0 +1,8 @@
+success	     verde escuro	  azul claro
+info	     azul escuro	  azul claro
+warning	     marron claro	  rosa claro
+danger	     vermelho	      rosa claro
+primary	     azul	          azul claro
+seconday	 preto	          azul claro
+dark	     preto	          azul claro
+light	     cinza claro	  branco
