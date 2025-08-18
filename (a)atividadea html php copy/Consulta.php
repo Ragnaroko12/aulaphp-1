@@ -1,9 +1,12 @@
-<?php 
+<?php
 session_start();
 
 if(!isset($_SESSION['nome'])){
   header('location:cadastro.php');
 }
+include_once("funçoes.php");
+
+$dados = consulta();
 
 ?>
 <!DOCTYPE html>
@@ -20,51 +23,39 @@ if(!isset($_SESSION['nome'])){
 <nav class="navbar bg-warning">
   <div class="container-fluid">
     <a class="navbar-brand"> Bem vindo <?php echo $_SESSION['nome'];?></a>
-    <a class="icon-link" href="./DestruirSessão.php">
-      <button>Lougot</button>
+    <a href="./adm.php">
+      <button class="btn btn-primary">Voltar</button>
     </a>
   </div>
 </nav>
 
 
 <div class="container">
+<div class="mt-5">
+<table class="table table-hover">
+  <tr>
+    <td>id</td>
+    <td>Nome</td>
+    <td>Cpf</td>
+    <td>Sexo</td>
+    <td>Email</td>
+  </tr>
+<?php
+foreach ($dados as $key => $value) {
 
-<div class="text-center">
-  <div class="row">
-    <div class="col-md-3 mt-6">
-      <a href="Cadastro.php   ">
-      <button type="button" class="btn btn-success">Cadastro</button>
-      </a> 
-    </div>
-
-    <div class="col-md-3 mt-6">
-      <a href="consulta.php">
-      <button type="button" class="btn btn-primary">consulta</button>
-      </a>   
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-3 mt-6">
-      <a href="Alteração.php   ">
-      <button type="button" class="btn btn-danger">Alteração</button>
-      </a> 
-    </div>
-
-    <div class="col-md-3 mt-6">
-      <a href="exclusão.php">
-      <button type="button" class="btn btn-warning">exclusão</button>
-      </a>   
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-3 mt-6">
-      <a href="CadastrarProduto.php">
-      <button type="button" class="btn btn-warning">Cadastrar Produto</button>
-      </a>   
-    </div>
-  </div>
+  echo"<tr>";
+  echo   "<td>".$dados[$key]["id"]."</td>";
+  echo   "<td>".$dados[$key]["nome"]."</td>";
+  echo   "<td>".$dados[$key]["cpf"]."</td>";
+  echo   "<td>".$dados[$key]["sexo"]."</td>";
+  echo   "<td>".$dados[$key]["email"]."</td>";
+  echo"</tr>";
+} 
+?>
+</table>
 </div>
+</div>
+
 
 
 
@@ -73,14 +64,6 @@ if(!isset($_SESSION['nome'])){
     @supremacia pato
   </div>  
 </div>
-
-
-
-
-
-
-
-
 
 </div> 
 </body>

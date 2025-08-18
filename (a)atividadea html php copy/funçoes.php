@@ -1,17 +1,24 @@
 <?php
+if (isset($_GET['id'])){
+    exclusão($_GET['id']);
+}
 function init(){
     $pdo = new PDO('mysql:host=localhost;dbname=aulasphp1','root','');    
     return $pdo;
 }
 
-function consulta(){
-    
+function consulta(){ 
     $pdo = init();
-
-    $sql = $pdo -> prepare("SELECT * FROM `usuarios` WHERE email=? AND senha=?");
-
-    $sql->execute(array($_POST['email'], sha1($_POST['senha'])));    
+    $sql = $pdo->prepare("SELECT * FROM `usuarios`");
+    $sql->execute(array());
+    $dados = $sql->fetchALL(PDO::FETCH_ASSOC);
+    return $dados;
+}
+function exclusão($id){
+    $pdo = init();
+    $sql = $pdo->prepare("DELETE FROM `usuarios` WHERE id=?");
+    $sql->execute(array($id));
+    header("location:exclusão.php");
 }
 
-    $dados = $sql ->fetchALL(PDO::FETCH_ASSOC);
 ?>
