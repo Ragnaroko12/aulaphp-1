@@ -50,7 +50,7 @@ foreach ($dados as $key => $value) {
   echo   "<td>".$dados[$key]["cpf"]."</td>";
   echo   "<td>".$dados[$key]["sexo"]."</td>";
   echo   "<td>".$dados[$key]["email"]."</td>";
-  echo   "<td> <a class='link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover' href='funçoes.php?id=".$dados[$key]['id']."&tp=excluir'>excluir</a> </td>";
+  echo   "<td> <a class='link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover' href='funçoes.php?id=".$dados[$key]['id']."&tp=alterar'>alterar</a> </td>";
   echo"</tr>";
 } 
 ?>
