@@ -33,7 +33,7 @@ session_start();
             if (isset($_SESSION['retorno'])) {
                 $resposta = $_SESSION['retorno'];
                 echo $resposta;
-            };
+            }; 
     ?>
   </div>
 

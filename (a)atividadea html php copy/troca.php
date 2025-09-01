@@ -1,9 +1,6 @@
 <?php
-session_start();
-
 include_once('funçoes.php');
 $dados = consultaid($_SESSION['id']);
-print_r($dados);
 ?>
 
 <!DOCTYPE html>
@@ -21,13 +18,13 @@ print_r($dados);
     <nav class="navbar bg-warning">
     <div class="container-fluid">
         <a class="navbar-brand"> Bem vindo <?php echo $_SESSION['nome'];?></a>
-        <a href="./adm.php">
+        <a href="./Alteração.php">
         <button class="btn btn-primary">Voltar</button>
         </a>
     </div>
     </nav>
         <h1>fixinha da associação Pato</h1>
-        <form action="armazenar-cadastro.php" method="post" class="row">
+        <form action="funçoes.php?tp=concluir" method="post" class="row">
             <!-- linha 1 -->
             <div class="row">
                 <div class="col-mb-12 mt-2">
@@ -142,19 +139,7 @@ print_r($dados);
 
             </div>
             <!-- linha 9 -->
-            <div class="row">
-                <div class="col-mb-12 mt-2">
-                    <input class="form-control" type="password" name="senha" id="" placeholder="insira a senha">                    
-                </div>
 
-            </div>
-            <!-- linha 10 -->
-            <div class="row">
-                <div class="col-mb-12 mt-2">
-                    <input class="form-control" type="password" name="csenha" id="" placeholder="confirmar a senha">                    
-                </div>
-            </div>
-            <!-- linha 11 -->
             <div class="row">
                 <div class="col-mb-12 mt-2">
                     <input class="btn btn-primary" type="submit" value="enviar">                    

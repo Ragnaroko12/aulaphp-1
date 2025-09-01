@@ -58,7 +58,9 @@ foreach ($dados as $key => $value) {
 </table>
 </div>
 </div>
-
+<?php
+echo $_SESSION['aviso']
+?>
 
 
 

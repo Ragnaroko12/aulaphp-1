@@ -30,7 +30,7 @@ if(!isset($_SESSION['nome'])){
     </a>
   </div>
 </nav>
-
+ 
 
 <div class="container">
 
